@@ -1,4 +1,4 @@
-from django.urls import path
+"""Posts urls.py."""
 
 urlpatterns = [
 ]
