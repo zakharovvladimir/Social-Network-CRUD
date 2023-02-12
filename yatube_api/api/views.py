@@ -1,10 +1,11 @@
 """API views."""
 from django.shortcuts import get_object_or_404
+from posts.models import Comment, Group, Post
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
+
 from .permissions import UserPermission
-from .serializers import PostSerializer, GroupSerializer, CommentSerializer
-from posts.models import Post, Group, Comment
+from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -40,6 +41,5 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         """Comment request."""
-        post_id = self.kwargs.get('post_id', id)
-        new_queryset = Comment.objects.filter(post=post_id)
-        return new_queryset
+        post = get_object_or_404(Post, id=self.kwargs.get('post_id', id))
+        return post.comments.all()
