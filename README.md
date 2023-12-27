@@ -1,6 +1,6 @@
-# YaTube
+# Social Network CRUD
 
-API for YaTube. A simple social network with all the basic elements to function and expand.
+CRUD for Social Network. A simple social network with all the basic elements to function and expand.
 
 ## Installation
 
