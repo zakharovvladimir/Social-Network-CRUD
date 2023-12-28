@@ -40,5 +40,8 @@ Feel free to contact: vladimir.zakharov.s@yandex.ru
 github.com/zakharovvladimir
 
 ## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
